@@ -13,4 +13,5 @@ if __name__ == '__main__':
         posts_list = session.query(Post).filter(Post.user_id==user.id).all()
         print(posts_list)
 
-        # user.posts
+        # user.posts 
+        
