@@ -1,0 +1,16 @@
+<h1>
+    Curso de Python na ProWay
+</h1>
+
+{% if latest_post_list %}
+
+<ul>
+    <li>
+    {% for post in latest_post_list %}
+        <li><a href="{% url 'blogs:detail' post.question_id %}">{{ post.title }}</a></li>
+    {% endfor %}
+    {% else %}
+        </a>
+    </li>
+    {% endif %}
+</ul>
