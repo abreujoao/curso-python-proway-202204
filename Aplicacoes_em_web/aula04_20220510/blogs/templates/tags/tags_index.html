@@ -1,0 +1,16 @@
+<h1>
+    Lista de tags
+</h1>
+
+{% if tags_list %}
+
+<ul>
+    {% for tag in tags_list %}
+        <li><a href="#">{{ tag.text }}</a> </li>
+    {% endfor %}
+{% else %}
+    <h2>
+        Não há tags cadastradas
+    </h2>
+{% endif %}
+</ul>

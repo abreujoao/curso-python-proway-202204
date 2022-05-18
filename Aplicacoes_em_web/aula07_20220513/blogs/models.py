@@ -32,10 +32,3 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.text
-
-class Values(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    body_text = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.body_text

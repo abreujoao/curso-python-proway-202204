@@ -1,7 +1,7 @@
 from django.urls import path
 
 # Importamos o módulo 'views' que está no mesmo diretório de 'urls.py'
-from .views import posts, comments, tags, values
+from .views import posts, comments, tags
 
 # namespace
 # Dessa maneira conseguimos diferenciar rotas que possuem o mesmo
@@ -20,9 +20,5 @@ urlpatterns = [
     #tag
     path('tags/', tags.IndexView.as_view(), name='tags_index'),
     #path('tags/<int:tag_id>/', tags.detail, name='tags_detail')
-
-    #value
-    path('values/', values.index, name='values_index'),
-    path('values/', values.detail, name='values.detail')
 
 ]

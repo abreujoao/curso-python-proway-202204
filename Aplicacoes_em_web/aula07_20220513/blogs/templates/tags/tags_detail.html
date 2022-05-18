@@ -1,0 +1,14 @@
+<h1>
+    Detalhes da tag #{{ tag }}.
+</h1>
+
+<h3>
+    Posts relacionados a Tag Comida # {{ tag }}
+</h3>
+
+<ul>
+    <li>
+        <a href="{% url 'blogs:detail' post.pk %}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>

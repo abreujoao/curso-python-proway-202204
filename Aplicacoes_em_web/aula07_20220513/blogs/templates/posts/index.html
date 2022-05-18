@@ -1,0 +1,12 @@
+<!--
+Sempre que quisermos utilizar alguma instrução do Python (if, for), temos que usar o padrão
+-->
+{% if post_list %}
+<ul>
+    {% for post in post_list %}
+        <li><a href="{% url 'blogs:detail' post.pk %}">{{ post.title }}</a></li>
+    {% endfor %}
+{% else %}
+    <p>Não há posts cadastrados</p>
+{% endif %}
+</ul>
